@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .description {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            letter-spacing: 0.7px;
+            margin: 2px 9px;
+            padding: 2p 4px 4px 4px;
+
+        }
+
+        .intro {
+            font-family: Arial, Helvetica, sans-serif;
+            color:
+                #1affff;
+            text-shadow: 1px 1px rgba(0, 0, 0, 1);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-size: 18px;
+            padding-left:2px;
+
+        }
+
+
+        .intro2 {
+            font-family: Arial, Helvetica, sans-serif;
+            color: 	 #46d4fffb; 	      ;
+            text-shadow: 1.5px 1.5px rgb(53, 23, 23);
+            font-size: 16px;
+        }
+
+        .within_description_link {
+            text-align: center;
+            color: #b3ccff;
+        }
+
+        .within_description_link:hover {
+            font-weight: bold;
+            color: #6e6eee;
+        }
+
+        .within_description_link:active {
+            font-weight: bold;
+            color: #7070f1;
+        }
+
+        h3 {
+            border-bottom: 3px solid;
+           
+            border-image: radial-gradient(45deg, #668cff, white) 1;
+            color: white;
+            font-size: 19px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #668cff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            width:100%;
+        }
+
+        h2 {
+            color: white;
+            text-decoration: underline;
+            font-weight: 2px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 25px;
+            text-align: center;
+            border-style: double;
+            border-color: rgba(1, 1, 63, .9);
+            background-color: rgba(1, 1, 63, .9);
+            width: 100%;
+
+        }
+
+        button {
+
+            background-color: #4d4dff;
+            display: inline block;
+            margin-bottom: 3.5px;
+            margin-top: 3.5px;
+            border-color: #9c9cfc;
+            border-radius: 5px;
+            padding: 5px 5px 5px 3px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+
+        }
+
+        button:hover {
+            background-color: rgba(3, 3, 61, 1);
+        }
+
+        button:active {
+            background-color: rgba(3, 3, 61, 1);
+
+
+        }
+
+
+
+        .s_navbar {
+
+            margin: auto;
+            text-align: center;
+
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+
+
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #e6e6ff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+
+        .dropdown-content a {
+            color: rgba(3, 3, 61, 1);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content :hover {
+            background-color: #b3b3ff
+        }
+
+        .dropdown-content :active {
+            background-color: #b3b3ff
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        .note {
+            color: white;
+            font-weight: bold;
+        }
+
+        .caption {
+            color: rgb(221, 221, 233);
+            font-size: 18px;
+            text-transform: uppercase;
+            border-top: 2px double white;
+            border-left: 2px double white;
+            border-right: 2px double white;
+            text-shadow: 3px 2px rgb(71, 26, 26);
+            font-weight: bold;
+        }
+
+        th {
+            background-color:
+            #5b91ff;
+            text-align: center;
+            border: 1px solid rgba(3, 3, 61, 1);
+            ;
+            border-style: double;
+            border-collapse: collapse;
+            padding: 5px;
+            color: black;
+        }
+
+        td {
+            color: black;
+            text-align: center;
+            border: 1px solid rgba(3, 3, 61, 1);
+            border-collapse: collapse;
+        }
+
+        table {
+            border: 1px solid rgba(3, 3, 61, 1);
+
+
+        }
+
+        tr:nth-child(even) {
+            background-color: #b3ccff;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #dcdcec;
+        }
+
+        .steps {
+            color: #5b91ff;
+            text-shadow: 1.5px 1.5px rgb(53, 23, 23);
+        }
+
+        #main1,
+        #main2,
+        #main3,
+        #main4,
+        #main5,
+        #main6,#main7 {
+            margin: 1px 8px;
+            display: none;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.3);
+            text-shadow: rgba(255, 255, 255, 0.15);
+
+
+        }
+
+
+        #images {
+            background-repeat: no-repeat;
+
+            background-size: cover;
+            background-image: url('bg.png');
+
+            position: absolute;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body id="images">
+
+    <div class="sch_container ">
+        <div id="bg">
+            <h2><b>Samarth
+                    (Respite Care)
+                </b></h2>
+
+            <div class="s_navbar">
+
+                <div id="bg_nav">
+                    <button onclick="m1()" type="button" class="bts" style="color: white;"> About the Scheme </button>
+                    <button class="bts" type="button" onclick="m2()" style="color: white;">Infrastructure facilities
+                    </button>
+                    <button class="bts" type="button" onclick="m3()" style="color: white;">Staff Requirement
+                    </button><br>
+                    <button class="bts" type="button" onclick="m4()" style="color: white;">Funding Patterns </button>
+                    <button class="bts" type="button" onclick="m5()" style="color: white;">Linkage with GHARAUNDA
+                        Centre</button>
+                    <button class="bts" type="button" onclick="m6()" style="color: white;">Eligibility Criteria for
+                        Registered
+                        Organisations (ROs) and
+                        Persons with
+                        Disabilities (PwDs)</button>
+
+                    <button class="bts" type="button" onclick="m7()" style="color: white;">Enrolment Process for
+                        Registered
+                        Organisations
+                        (ROs) and Persons
+                        with
+                        Disabilities (PwDs) </button>
+
+                    <div class="dropdown">
+                        <button type="button" class="bts" style="color: white;">Download <i
+                                class="fa fa-caret-down"></i>
+
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="samarth_eng.pdf">Download the Scheme</a>
+                            <a href="Minimum Standard of Samarth.pdf">Minimum Standard of Vikas</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button type="button" class="bts" style="color: white;">Registration <i
+                                class="fa fa-caret-down"></i>
+
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                    <button type="button" class="bts" onclick="window.print()" style="color: white;" id="print">Print <i
+                            style="font-size:18px" class="fa">&#xf02f;</i>
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+        <div id="main1">
+            <h3>About the scheme</h3>
+            <div class="description">
+                <ul>
+                    <li>
+                        Respite home for orphans or abandoned, families in crisis and also for Persons with Disabilities
+                        (PwD) from BPL &amp; LIG families including destitute</li>
+                    <li>
+                        Opportunities for family members to get respite time in order to fulfil other responsibilities.
+                    </li>
+                    <li>
+                        Group home facility for all age groups with adequate and quality care service with acceptable
+                        living standards including provision of basic medical care from professional doctors.</li>
+                    <li>
+                        Batch size 30 PwDs.</li>
+                    <li>
+                        RO should maintain a ratio of 1:1 for LIG (including BPL) and above LIG PwDs.</li>
+                    <li>
+                        Scheme will be available in the entire country </li>
+                </ul>
+                <strong class="intro">Scheme Description</strong>
+                <p>
+                    This scheme aims at setting up Samarth Centres for providing respite and residential care of the
+                    specified categories of Persons with Disability (PwD). Samarth Centre should provide at a minimum
+                    following facilities:</p>
+                <p class="intro2">
+                    <strong>Group Home</strong>
+                </p>
+                <p>
+                    RO should provide group home facility for all age groups with adequate and quality care service with
+                    acceptable living standards including provision of basic medical care from professional
+                    doctors<em><strong>.</strong></em>Capacity of a Samarth Centre is 30 including non LIG and non BPL
+                    PwDs.</p>
+                <p>
+                    Batch size of a Samarth centre is 30 PwDs and the maximum number of PwDs allowed is 30% extra of
+                    batch size i.e. 39 for Samarth Centres. On reaching the maximum limit of 39 PwDs, Samarth centre
+                    shall not allow anymore PwDs to enrol in the centre. ROs are encouraged to apply again if they have
+                    sufficient number of PwDs for the new Samarth Centre.</p>
+                <p>
+                    RO should maintain a ratio of 1:1 for LIG (including BPL) and above LIG PwDs (which will be paid
+                    seats for RO). Payment for the above LIG seats could be received by RO from parents, guardians,
+                    family members, RO or any other institute/ individual directly as per mutually agreed terms and
+                    conditions between RO and the other party involved (parents, guardians, family members, RO or any
+                    other institute/ individual)</p>
+                <p>
+                    As stated earlier in the document, it is to be noted that RO should bring in more PwDs to the
+                    Samarth centre who are either Non-LIGs or who are not covered in the above mentioned category, to
+                    ensure sustainability.</p><br>
+            </div>
+        </div>
+        <div id="main2">
+            <div class="description">
+                <h3>
+                    Infrastructure facilities</h3>
+                <p>
+                    Samarth Centre must have at least one Medical room or Assessment room (with therapeutic aids and
+                    appliances), at least one Activity room or Vocational room, at least one recreation room (all rooms
+                    to be of reasonable size), hygienic lodging and other facilities for the PwDs.</p>
+                <p>
+                    The Samarth Centre should also have provision for a kitchen and office supplies including a personal
+                    computer for the office purpose and for sending fund request, submitting reports etc. to the
+                    National Trust.</p>
+                <p>
+                    Assistance for setting up work centres (only the set up cost), will be provided by the National
+                    Trust depending upon the viability of the proposal.</p>
+            </div><br>
+        </div>
+
+        <div id="main3">
+            <h3>
+                Staff Requirement</h3>
+            <div class="description">
+                <p>The requirements are:</p>
+                <ol>
+                    <li>
+                        Provision of at least two Special Educators (+Vocational Trainers)</li>
+                    <li>
+                        One Physiotherapist or Occupational Therapist</li>
+                    <li>
+                        Three Caregivers</li>
+                    <li>
+                        Two Ayas</li>
+                    <li>
+                        Cook</li>
+                </ol>
+                <p class="intro">
+                    <strong>Staffing </strong>
+                </p>
+                <p>
+                    There should be a provision of at least two Special Educators (+Vocational Trainers), one
+                    Physiotherapist or Occupational Therapist, three Caregivers, two Ayas and a Cook in the Samarth
+                    centre.
+                </p>
+                <p>
+                    Provision of a Physical Trainer and Speech Therapist in these centres is also desirable.</p>
+                <p>
+                    The frequency or schedule of the staff is to be followed as below:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                S. No.</th>
+                            <th>
+                                Category</th>
+                            <th>
+                                Number of staff</th>
+                            <th>
+                                Frequency or Minimum number of visits required per month</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                I.</td>
+                            <td>
+                                Special educator (+vocational trainer)</td>
+                            <td>
+                                2</td>
+                            <td>
+                                Everyday</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                II.</td>
+                            <td>
+                                Physiotherapist or Occupational Therapist</td>
+                            <td>
+                                1</td>
+                            <td>
+                                5 times a week</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                III.</td>
+                            <td>
+                                Caregiver</td>
+                            <td>
+                                3</td>
+                            <td>
+                                Every day, 2 shifts</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                IV.</td>
+                            <td>
+                                Aya</td>
+                            <td>
+                                2</td>
+                            <td>
+                                Everyday</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                V</td>
+                            <td>
+                                Cook</td>
+                            <td>
+                                1</td>
+                            <td>
+                                Everyday</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul>
+                    <li>
+                        Infrastructure facilities</li>
+                    <li>
+                        One Medical or Assessment room (with therapeutic aids and appliances)</li>
+                    <li>
+                        One Activity room or Vocational room</li>
+                    <li>
+                        One recreation room</li>
+                    <li>
+                        Hygienic lodging and other facilities for the PwDs</li>
+                    <li>
+                        Kitchen</li>
+                    <li>
+                        Office supplies including a personal computer for the office purpose</li>
+                </ul>
+
+            </div><br>
+        </div>
+
+        <div id="main4">
+            <h3>
+                Funding Patterns</h3>
+            <div class="description">
+                <table>
+                    <caption class="caption">
+                        Funding Pattern</caption>
+                    <tbody>
+                        <tr>
+                            <th>
+                                S. No.</th>
+                            <th>
+                                Funding Head</th>
+                            <th>
+                                Amount (in INR)</th>
+                            <th>
+                                Frequency of funds disbursement</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                1</td>
+                            <td>
+                                Setup Cost</td>
+                            <td>
+                                2,90,000/-</td>
+                            <td>
+                                One time</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2</td>
+                            <td>
+                                Sustenance Cost</td>
+                            <td>
+                                5,000/- reimbursement per Differential PwD<sup>#</sup> per month</td>
+                            <td>
+                                Monthly for initial 3 months</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3</td>
+                            <td>
+                                Monthly Recurring Cost</td>
+                            <td>
+                                5,000/- per PwD per month</td>
+                            <td>
+                                Monthly</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4</td>
+                            <td>
+                                Setup Cost for Work centre</td>
+                            <td>
+                                In the range of 25,000/- to 1,00,000/--</td>
+                            <td>
+                                Case to case basis</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="note">
+                    *Note that the set up cost has been increased from Rs. 1,95,000 to Rs.2,90,000 based on the
+                    discussion </em><em>in the Conference of State Welfare Secretaries held in Delhi on 1
+                    </em><em>st </em><em>and 2</em><em>nd </em><em>July 2015.
+                </p>
+                <p>
+                    National Trust will provide funding to the Samarth Centre under following three heads:</p>
+                <p>
+                    <strong class="intro"> I. Setup Cost</strong>
+                </p>
+                <p>
+                    This is a non-recurring one-time cost that would be provided to RO initially to setup the Samarth
+                    Centre. In addition to the grant from National Trust, RO is free to arrange grant from other sources
+                    to improve the infrastructure. It shall be the prerogative of the RO to buy the necessary products
+                    and items for set up from the places of their choice.</p>
+                <p>
+                    <strong class="intro">II. Sustenance Cost</strong>
+                </p>
+                <p>
+                    Sustenance Cost shall be provided by the National Trust to Samarth Centre for maximum 3 months after
+                    the set up period. This has been provisioned considering the fact that the RO would find it
+                    difficult to enrol 30 PwDs in the first month. Sustenance cost shall be given in order to ensure
+                    that all staff and facilities are available and functional from the first day of operation of the
+                    centre, irrespective of the number of PwDs enrolled. The advantage of providing sustenance cost is
+                    that the RO would be able to run the centre without any difficulty and also because the National
+                    Trust believes that it would be able to become stable within the sustenance period.</p>
+                <p>
+                    <strong class="intro2">Qualification criteria for sustenance</strong>
+                </p>
+                <p>
+                    National Trust shall provide sustenance cost to the centre only if the minimum number of PwDs in a
+                    Samarth centre in initial 3 months is at least 20% of the expected batch size in each month ( in
+                    this case 6). The centre can be made operational only when minimum 6 PwDs are enrolled.</p>
+                <p>
+                    <strong class="intro2">Calculation of sustenance</strong>
+                </p>
+                <p>
+                    Sustenance Cost shall be calculated on pro-rata basis based on difference in total expected PwDs and
+                    number of actual PwDs in the centre during the 3 months.<br />
+                    <em>For example, If RO has 6 PwDs in the first month of its operation, then sustenance cost will
+                        be</em> <em>paid for 30- 6 = 24 PwDs. However, for the 6 PwDs already enrolled, monthly
+                        recurring cost</em> <em>shall be paid as per the scheme.</em>
+                </p>
+                <p>
+                    <strong class="intro2">Validity of sustenance</strong>
+                </p>
+                <p>
+                    The provision of sustenance cost is conditional upon the timely start of operation of the Samarth
+                    centre. The Samarth centre is expected to start operations within 1 month from the release of set up
+                    cost. In case the start of operations exceeds this deadline by more than a month (that means
+                    operations have not started even within 2 months from release of setup cost), the overall period for
+                    which sustenance cost would be provided would be reduced by the duration of delay. For example, if
+                    the Samarth centre starts the operation three months after the set up cost has been provided,
+                    sustenance cost shall only be provided for 2 months. Similarly, if the Samarth centre starts the
+                    operation four months after the set up cost has been provided, sustenance cost shall only be
+                    provided for 1 month.</p>
+                <p>
+                    <strong class="intro2">Samarth-Respite Care</strong><br />
+                    In case the Samarth centre closes down within one year of start of operations, sustenance amount
+                    that is given to concerned RO for the Samarth Centre shall be taken back from that RO.
+                </p>
+                <p>
+                    <strong class="intro">III. Monthly Recurring Cost</strong>
+                </p>
+                <p>
+                    The National Trust shall pay monthly recurring cost for all PwDs at Samarth Centre which are
+                    eligible to be funded by the National Trust starting from first month of operations. The National
+                    Trust shall fund the Centre only if the minimum number of PwD in a Samarth centre in the month is
+                    30% of the expected batch size (i.e. in this case 9)</p>
+                <p>
+                    The National Trust shall fund the PwD as per the following conditions:</p>
+                <p>
+                    a. The National Trust shall fund PwDs in a Samarth Centre in 1:1 ratio provided there are equal
+                    numbers of LIG (including BPL) and above LIG PwDs. LIG shall be defined as follows:</p>
+                <p>
+                    <em>LIG = BPL limit set by the state + additional 50% of BPL Limit of that state</em>
+                </p>
+                <p>
+                    b. If number of LIG (including BPL) PwDs is more than number of above LIG PwDs, funds shall be
+                    provided for only those LIG for which 1:1 ratio is maintained ( LIG including BPL : Above LIG
+                    category). In this scenario, BPLs shall be given preference for funding.</p>
+                <p>
+                    c. If number of LIG (including BPL) PwDs is less than number of above LIG PwDs, the National Trust
+                    shall fund total number of LIG (including BPL).</p>
+                <p>
+                    d. Apart from this, the National Trust will fund 100% BPL PwDs in Samarth Centre as per the scheme
+                    irrespective of ratio, but same is not true for LIGs</p>
+                <p class="intro2">Example for funding by the National Trust
+                </p>
+                <table>
+                    <caption class="caption">
+                        Monthly Recurring Cost</caption>
+                    <tbody>
+                        <tr>
+                            <th>
+                                Total Strength</th>
+                            <th>
+                                No. of LIG (including BPL)</th>
+                            <th>
+                                No. of Above LIG</th>
+                            <th>
+                                No. of PwD funded by National Trust</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                30</td>
+                            <td>
+                                15</td>
+                            <td>
+                                15</td>
+                            <td>
+                                15</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                30</td>
+                            <td>
+                                20</td>
+                            <td>
+                                10</td>
+                            <td>
+                                10</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                30</td>
+                            <td>
+                                10</td>
+                            <td>
+                                20</td>
+                            <td>
+                                10</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                30</td>
+                            <td>
+                                20 (16 BPL and 4 LIG)</td>
+                            <td>
+                                10</td>
+                            <td>
+                                16</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                30</td>
+                            <td>
+                                20 (8 BPL and 12 LIG)</td>
+                            <td>
+                                10</td>
+                            <td>
+                                10</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="intro">
+                    Setup Cost for Work centre (if availed by the RO)
+                </p>
+                <p>
+                    The National Trust shall also consider funding the setup cost for Work Centres opened by existing
+                    ROs after validating the viability of the proposal. Existing RO should have minimum 10 trained PwDs
+                    covered under the National Trust Act to work in these work centres to avail the set up cost.</p>
+                <p>
+                    In case the work centre is closed down within one year of start of operations, set up cost of work
+                    centre shall be taken back from that RO by the National Trust.</p>
+                <p>
+                    Funds allocated under each of the above mentioned heads is as follows:</p>
+                <table>
+                    <caption class="caption">
+                        Cost for Work centre</caption>
+                    <thead>
+                        <tr>
+                            <th>
+                                S. No.</th>
+                            <th>
+                                Funding Head</th>
+                            <th>
+                                Amount (in INR)</th>
+                            <th>
+                                Frequency of funds disbursement</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                I.</td>
+                            <td>
+                                Setup Cost (setup of activity room/ recreation room/ medical room, computer, furniture,
+                                Scanner and internet connection)</td>
+                            <td>
+                                2,90,ooo/-</td>
+                            <td>
+                                One time</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                II.</td>
+                            <td>
+                                Sustenance Cost</td>
+                            <td>
+                                7,000/- reimbursement per Differential PwD<sup>#</sup>per month <em># Differential PwD =
+                                    Maximum expected PwD in Samarth Centre (30) &ndash; Actual PwDs in Samarth Centre
+                                    for that month</em> It is clarified that the minimum PwDs enrolled by RO in initial
+                                months shall not be less than 6.</td>
+                            <td>
+                                Monthly for initial 3 months</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                III.</td>
+                            <td>
+                                Monthly Recurring Cost</td>
+                            <td>
+                                7,000/- per PwD per month</td>
+                            <td>
+                                Monthly</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                IV.</td>
+                            <td>
+                                Setup Cost for Work centre (if availed by the RO)</td>
+                            <td>
+                                In the range of 25,000/- to 1,00,000/--</td>
+                            <td>
+                                Case to case basis</td>
+                        </tr>
+                    </thead>
+                </table>
+            </div><br>
+        </div>
+        <div id="main5">
+            <h3> Linkage with GHARAUNDA Centre</h3>
+            <p class="description">Should facilitate shifting the PwD who is above 18 years of age and has spent more
+                than 5 years in the Samarth Centre to Gharaunda centre.</p>
+
+
+        </div>
+        <div id="main6">
+            <h3>
+                Eligibility Criteria for Registered Organisations (ROs) and Persons with Disabilities (PwDs)</h3>
+            <p>
+            <div class="description"> <strong class="intro">Filter criteria for applying under the new schemes is as
+                    under:</strong>
+                </p>
+                <ol>
+                    <li>
+                        Must be Registered with the National Trust.</li>
+                    <li>
+                        Must be Registered under the PwD Act.</li>
+                    <li>
+                        Must not have been blacklisted by the State / Central Govt. / Other Govt.</li>
+                    <li>
+                        RO should have minimum 2 years of experience of working with PwDs with at least one year in one
+                        of the four disabilities under the National Trust Act</li>
+                    <li>
+                        Bank Account details of the Registered Organisation.</li>
+                    <li>
+                        E-mail ID and contact details of the Registered Organisation.</li>
+                </ol>
+                <p class="note">
+                    Note: Unless the Registered Organisation fulfil the above criteria, he / she can not apply under
+                    the scheme
+                </p>
+                <ol>
+                    <li>
+                        Criteria for Registered Organisation (RO)</li>
+                    <li>
+                        Criteria for Persons with Disabilities (PwDs)</li>
+                </ol>
+                <p>
+                    <strong class="intro">Criteria for Registered Organisation (RO)</strong>
+                </p>
+                <ol>
+                    <li>
+                        Requesting organization should be registered with National Trust.</li>
+                    <li>
+                        The group home land should either be owned by RO or should have lease of at least 5 years with
+                        provision of renewal.</li>
+                    <li>
+                        RO should have minimum 2 years of experience of working with PwD with at least one year
+                        experience in one of the four disabilities under National Trust Act.</li>
+                    <li>
+                        NGO should not be blacklisted by National Trust/any other government organization, at the time
+                        of enrolment for the scheme.</li>
+                </ol>
+            </div><br>
+        </div>
+
+        <div id="main7">
+            <h3>
+                Enrolment Process for Registered Organisations (ROs) and Persons with Disabilities (PwDs)</h3>
+            <div class="description" style="font-weight: bolder;">
+                <ul>
+                    <li>
+                        Enrolment Process for Registered Organisations (ROs)</li>
+                    <li>
+                        Enrolment Process for Persons with Disabilities (PwDs)</li>
+                </ul>
+                <p>
+                    <strong class="intro">I. Enrolment Process for Registered Organisations (ROs)</strong>
+                </p>
+                <ol>
+                    <li>
+                        Fill up the Samarth application form online and upload the scanned documents as required</li>
+                    <li>
+                        Submit the duly filled in form on the National Trust portal</li>
+                    <li>
+                        Pay the application fees of Rs.1000 online</li>
+                    <li>
+                        Send the print out of the filled form along with the supporting documents to the National Trust
+                        within 7 days, so that it reaches the National Trust office within 15 days.</li>
+                </ol>
+                <p>
+                    <strong>RO Enrolment (first approval) process</strong>
+                </p>
+                <p>
+                    RO enrolment process defines the steps to be followed while enrolling for Samarth Centre for the
+                    first time. It also details out the required information and documents at each step and timelines
+                    for various activity wherever applicable.</p>
+                <p>
+                    RO enrolment process defines the steps to be followed while enrolling for Samarth Centre for the
+                    first time. It also details out the required information and documents at each step and timelines
+                    for various activity wherever applicable.</p>
+                <p>
+                    <pc> <strong>STEP 1. </strong>The RO logs in to the National Trust website</pc>
+                </p>
+                <p>
+                    <strong>STEP 2. </strong>The application form is available online on the National Trust website and
+                    has to be submitted online only. Application fees or enrolment in Samarth scheme is INR 1000/-
+                </p>
+                <p>
+                    <strong>STEP 3. </strong>After the National Trust receives the application form and the documents,
+                    these are verified and then physical verification is initiated. However, if there is any missing
+                    information or wrongly submitted information which needs to be submitted again, the RO is given 15
+                    days&rsquo; time to submit it again from the date of intimation of missing document by the National
+                    Trust.
+                </p>
+                <p>
+                    <em>Note that the documents related to physical verification of the RO and proposed Samarth</em>
+                    <em>centre can be submitted either at the time of enrolment for the scheme at the National
+                        Trust</em> <em>website or even after the online application form has been submitted. In case the
+                        RO fails to</em> <em>submit the same on time, the RO would be given 15 days&rsquo; time to
+                        submit the same after the RO</em> <em>receives the notification from the National Trust</em>
+                </p>
+                <p>
+                    <strong>STEP 4. </strong>The final decision on the application or proposal is taken after completing
+                    all necessary formalities and processes. Based on the Physical verification report, if the RO meets
+                    scheme criteria and requirements, the application is approved. In case there is any discrepancy, RO
+                    is accordingly informed.
+                </p>
+                <p>
+                    <strong>STEP 5. </strong>Communication to RO by the National Trust shall be done within 15 days from
+                    point of receipt. In case of online form, point of receipt is date and time of submission of online
+                    form along with all the required documents. However, if there is any missing information, the
+                    National Trust has to communicate to RO within 10 days from receipt of online submission.
+                </p>
+                <p>
+                    <strong>STEP 6. </strong>In case the RO has not yet sent the hard copies of the documents, the
+                    National Trust would send a communication to the RO within 15 days from the prescribed time.
+                </p>
+                <p>
+                    <strong>STEP 7. </strong>Once Enrolment is completed, a scheme ID is created for the RO, and the
+                    confirmation for the same is communicated to RO.
+                </p>
+                <p>
+                    <strong>STEP 8. </strong>A starter kit/Samarth hand book containing the complete details of the
+                    Samarth scheme is also handed over to the RO by the National Trust.
+                </p>
+                <p>
+                    <strong>STEP 9. </strong>The National Trust to begin the fund disbursement process for providing
+                    setup cost to the ROs.<br />
+                    <br />
+                    The existing Samarth centres will also need to follow the same procedure as detailed above for
+                    enrolling under the new scheme including submission of documents and proposal. The RO will stop to
+                    receive benefits under the existing scheme and start receiving funds under the new scheme. The
+                    process for enrolment for Samarth scheme remains the same as explained above.
+                </p>
+                <p>
+                    <strong>Enrolment Process for Persons with Disabilities (PwDs)</strong>
+                </p>
+                <p class="intro">
+                    Enrolment of PwD at the Samarth Centre</p>
+                <p>
+                    <strong class="steps">STEP 1. </strong>PwD comes or is brought to the centre.
+                </p>
+                <p>
+                    <strong class="steps">STEP 2</strong>.The Samarth centre conducts an Individual PwD Assessment Test
+                    with the help
+                    of a Therapist or Counsellor to understand the specific needs of the PwD.
+                </p>
+                <p>
+                    <strong class="steps"> STEP 3.</strong> If PwD is orphan or abandoned or is from a family in crisis,
+                    the RO should
+                    approach the competent district officials authorised by the State Government to certify the same.
+                    Apart from the document for certifying the above, no more documents to be produced for enrolling
+                    with the Samarth Centre. Also, the PwD is automatically included in the BPL category. The PwD is
+                    enrolled for Niramaya along with registration for Samarth.
+                </p>
+                <p>
+                    <strong class="steps">STEP 4.</strong> In all other cases, a check is made on whether the PwD is
+                    applicable for
+                    the LIG or BPL funding by the National Trust.
+
+
+                </p>
+                <p>
+                    <strong class="steps">STEP 5.</strong> The parents or guardian is required to fill the Enrolment
+                    Form along with
+                    the originals and photocopies of the below mentioned documents. The documents and records for each
+                    PwD are to be maintained in separate files.
+                </p>
+                <p>
+                    <strong class="intro3">Documents required to be brought by Parents or guardians for enrolment in a
+                        Samarth Centre
+                        are:</strong>
+                </p>
+                <ol>
+                    <li>
+                        Enrolment form
+
+                    </li>
+                    <li>
+                        Birth certificate / Date of Birth proof of the PwD</li>
+                    <li>
+                        Disability certificate</li>
+                    <li>
+                        BPL certificate / Income certificate of Parents / Guardian issued by competent authority as
+                        authorized by the concerned State/ Union Territory (for LIG or BPL family)</li>
+                    <li>
+                        ID proof of parent or guardian</li>
+                    <li>
+                        Declaration proof of the guardianship if PwD &lt;18 years of age and parents are not the
+                        guardians</li>
+                </ol>
+
+                <p>
+                    Note that a necessary field for the intended duration of stay is also to be filled in the
+                    application form by the parents or guardian of the PwD.</p>
+                <p>
+                    <strong class="steps">STEP 6.</strong> In case of successful verification of all the above furnished
+                    documents,
+                    the PwD is enrolled at the Samarth centre &ndash; a confirmation Enrolment ID card/receipt is handed
+                    over to the PwDs parents or guardians ( if any), along with a starter kit. Further details about the
+                    starting date, rules and regulations etc. are to be mentioned by the Samarth representatives.
+                </p>
+                <p>
+                    <strong class="steps">STEP 7.</strong> Parents and guardians of the PwDs are given a detailed
+                    insight on the
+                    Niramaya health insurance scheme by the Samarth representatives, in case the PwD has not yet availed
+                    it already. RO representative may assist with the registration of the PwD under the Niramaya scheme,
+                    in case the parents or guardian agree for the same. In case of absence of parents or guardian, the
+                    Samarth centre needs to mandatorily enrol the PwD for Niramaya.
+                </p>
+            </div><br>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+    <script>
+        function m1() {
+            document.getElementById("main2").style.display = "none";
+            document.getElementById("main7").style.display = "none";
+            document.getElementById("main6").style.display = "none";
+            document.getElementById("main5").style.display = "none";
+            document.getElementById("main4").style.display = "none";
+            document.getElementById("main3").style.display = "none";
+            document.getElementById("para1").value
+                = document.getElementById("main1").style.display = "block";
+            document.getElementById("para1").style.display = "block";
+
+        }
+        function m2() {
+            document.getElementById("main1").style.display = "none";
+            document.getElementById("main7").style.display = "none";
+            document.getElementById("main6").style.display = "none";
+            document.getElementById("main5").style.display = "none";
+            document.getElementById("main4").style.display = "none";
+            document.getElementById("main3").style.display = "none";
+
+            document.getElementById("para1").value = document.getElementById("main2").style.display = "block";
+            document.getElementById("para1").style.display = "block";
+
+        }
+        function m3() {
+            document.getElementById("main7").style.display = "none";
+            document.getElementById("main1").style.display = "none";
+
+            document.getElementById("main6").style.display = "none";
+            document.getElementById("main5").style.display = "none";
+            document.getElementById("main4").style.display = "none";
+            document.getElementById("main2").style.display = "none";
+            document.getElementById("para1").value =
+                document.getElementById("main3").style.display = "block";
+            document.getElementById("para1").style.display = "block";
+
+        } function m4() {
+            document.getElementById("main7").style.display = "none";
+            document.getElementById("main1").style.display = "none";
+
+            document.getElementById("main6").style.display = "none";
+            document.getElementById("main5").style.display = "none";
+            document.getElementById("main3").style.display = "none";
+            document.getElementById("main2").style.display = "none";
+            document.getElementById("para1").value =
+                document.getElementById("main4").style.display = "block";
+            document.getElementById("para1").style.display = "block";
+
+
+        } function m5() {
+            document.getElementById("main2").style.display = "none";
+            document.getElementById("main7").style.display = "none";
+            document.getElementById("main6").style.display = "none";
+            document.getElementById("main4").style.display = "none";
+            document.getElementById("main1").style.display = "none";
+            document.getElementById("main3").style.display = "none";
+
+
+            document.getElementById("para1").value
+                = document.getElementById("main5").style.display = "block";
+
+        } function m6() {
+            document.getElementById("main2").style.display = "none";
+            document.getElementById("main7").style.display = "none";
+            document.getElementById("main5").style.display = "none";
+            document.getElementById("main4").style.display = "none";
+            document.getElementById("main1").style.display = "none";
+            document.getElementById("main3").style.display = "none";
+            document.getElementById("para1").value =
+                document.getElementById("main6").style.display = "block";
+        }
+        function m7() {
+            document.getElementById("main2").style.display = "none";
+            document.getElementById("main6").style.display = "none";
+            document.getElementById("main5").style.display = "none";
+            document.getElementById("main4").style.display = "none";
+            document.getElementById("main1").style.display = "none";
+            document.getElementById("main3").style.display = "none";
+            document.getElementById("para1").value =
+                document.getElementById("main7").style.display = "block";
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

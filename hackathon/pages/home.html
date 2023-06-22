@@ -1,0 +1,789 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title>Hello, world!</title>
+  <script src="../images/universal.js"></script>
+
+</head>
+
+<body>
+<style>
+  .MenuItem{
+    color:white !important;
+    border-bottom: 5px solid  rgba(3,3,61);
+    
+}
+body{
+    background:linear-gradient(to bottom, rgba(3,3,61,0.62) 0%, rgba(3,3,61,0.9) 100%)
+}
+.MenuItem:hover{
+    border-bottom: 5px solid rgb(66, 128, 241);
+}
+.dropdown:hover .dropdown-menu{
+        display:block !important;
+    }
+.dropdown-item:hover{
+    background-color: #7a9bcc;
+}
+.dropdown-menu{
+    border: 1px solid rgb(3,3,61)
+}
+.searchh{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(166, 166, 241);
+    color:white;
+} 
+.searchh:hover{
+    background-color: rgb(255, 255, 255);
+}
+.contann{
+    background-color: white;
+    max-width: 75% !important;
+    border: 12px solid rgba(3,3,61,0.5) !important;
+}
+.title{
+    color: white !important;
+}
+.department{
+    color: rgba(3,3,61);
+}
+.flexBox{
+    display:flex;
+    border-bottom:  4px solid rgba(3,3,61);
+    margin:0px;
+
+}
+.dropdown-item{
+    border-bottom: 2px solid rgb(95, 95, 124);
+    color: rgba(3,3,61);
+    text-transform: uppercase;
+    font-size:medium;
+    font-weight:700;
+}
+.dropdown-item:active{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+}
+.dropdown-menu{
+    background-color: rgb(255, 255, 255);
+}
+
+
+.item{
+    /* height: 120px; */
+
+    max-width: 400px;
+    width:auto;
+    margin: 0px auto;
+    margin-top: 20px;
+    margin-bottom:3px;
+    margin-left:0px;
+    padding: 0px 10px;
+    text-decoration: none !important;
+    /* border: 2px solid red; */
+    border-left:4px solid rgb(3,3,61);
+}
+.logo{
+    max-width: 200px;
+    border-left: 0px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin:20px auto;
+}
+.dep{
+    color:rgb(3,3,61);
+    text-decoration: none !important;
+    text-align: center left;
+    margin:auto !important;
+}
+.dep:hover{
+    text-decoration: underline !important;
+    color:rgb(3,3,61)  !important;
+}
+.item1{
+    width:70% !important;
+    border-right: 4px solid rgb(3,3,61);
+}
+.flexbox2{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 4px solid rgb(3,3,61);
+}
+.c-image{
+    width:500px;
+    height:395px;
+}
+.item2{
+    margin:auto;
+}
+.options{
+    color:white;
+    margin:10px auto;
+    text-align:center;
+    padding:15px 50px;
+    background-color: rgb(3,3,61);
+    border-radius: 5px;
+
+}
+.options:hover{
+    background-color: rgba(3,3,61,0.5);
+}
+h3{
+    margin:20px auto;
+    color:rgb(3,3,61) !important;
+    text-decoration: underline !important;
+}
+p{
+    font-size: 20px;
+    margin:20px;
+}
+.op{
+    color:white;
+    text-decoration: none;
+}
+.op:hover{
+    color:white;
+    text-decoration: none;
+}
+h3{
+    text-align: center !important;
+}
+.wrapper{
+    max-width: 75% !important;
+    width:75% !important;
+}
+/* bootdtrap_cards
+ */
+ .bg-light {
+    background-color: #f8f9fa!important;
+}
+.py-5 {
+    padding-top: 3rem!important;
+    padding-bottom: 3rem!important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+/* body {
+    margin: 0;
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+} */
+:root {
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+ @media (max-width:839px){
+    .department{
+        display:none;
+    }
+    .flexbox-m{
+        display:flex !important;
+    }
+    .flexBox{
+        flex-direction: column !important;
+    }
+    .foot{
+        text-align: center;
+    }
+
+}
+@media (min-width:839px)
+{
+    .flexbox-m{
+        display:none !important;
+    }
+    .foot{
+        display:none;
+    }
+} 
+@media(min-width:879px)and (max-width:1255px){
+
+    .item1{
+        border-right: none;
+        border-bottom: 4px solid rgb(3,3,61);
+    }
+    .item2{
+        max-width:100% !important;
+        margin:0px;
+        display:flex;
+        flex-direction: column;
+
+    }
+    .upper{
+        width:auto;
+        min-width: 100%;
+        display: flex;
+    }
+    .lower{
+        display: flex;
+        margin: auto;
+    }
+    .options{
+        width:200px;
+        margin:10px auto;
+        padding:15px;
+        white-space: nowrap;
+        text-align: center;
+    }
+    .item1{
+        max-width:100% !important;
+        width:100% !important;
+    }
+    .flexbox2{
+        flex-direction: column;
+    }
+
+}
+@media(max-width:879px){
+    .item1{
+        max-width:100% !important;
+        width:100% !important;
+        border-right: 0px;
+        border-bottom:5px solid rgb(3,3,61);
+    }
+    .item2{
+        display:flex;
+        flex-direction: column;
+        margin:5px;
+        margin:0px;
+        max-width: 100% !important;
+        width:100%;
+    }
+    .options{
+        margin:5px 2px;
+        margin-right: 5px;
+        padding:15px 20px;
+    }
+    .op{
+        width:100% !important;
+    }
+}
+/* footer wrapper  */
+.footer-wrapper{
+    max-width: 75%;
+    margin:auto;
+}
+.footer-bottom-wrapper {
+    background-color: #1a4697;
+    padding: 0;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+style attribute {
+    font-size: 100%;
+}
+.left-pnal.microweb a, body, h1, h2, h3, h4, h5, sup, td {
+    font-weight: 400;
+}
+.footer-bottom-wrapper:after {
+    margin:auto;
+    height: 4px;
+    max-width: 75%;
+    background: url(../images/after-bottom-bg.png);
+    z-index: 10;
+}
+.footer-bottom-wrapper:after, .footer-top-wrapper ul li:first-child:before {
+    content: '';
+}
+.col{
+    margin:30px auto;
+}
+.card:hover{
+    outline: 3px solid rgb(3,3,61);
+}
+@media(min-width:491px){
+    .card{
+        text-align: left;
+        color: black;
+        width: 18rem !important;
+        margin:auto;
+        background-image: repeating-linear-gradient(rgb(81, 47, 204), rgba(214, 214, 228, 0.568));
+        min-height: 500px;
+    }
+}
+.btn{
+    background-color: rgb(3,3,61);
+    border-radius: 5px;
+    
+}
+.btn:hover{
+    background-color: rgba(3,3,61,0.5);
+}
+h5{
+    font-weight:500;
+    text-align: center;
+    color:rgb(3,3,61);
+    font-size:25px;
+    border-bottom: 3px solid rgb(3,3,61);
+}
+p{
+    margin:0px;
+}
+@media(max-width:490px){
+    .card{
+        max-width: 16rem !important;
+        background-image: repeating-linear-gradient(rgb(81, 47, 204), rgba(214, 214, 228, 0.568));
+    }
+    .MenuItem{
+        border-bottom: 0px;
+    }
+}
+.clear{
+    margin-left:10px;
+}
+
+
+</style>
+  
+
+<button onclick="myFunction2()" id="color_button">Greyscale</button>
+<button onclick="myFunction1()" id="color_button">Normal</button>
+<!-- <script type="text/javascript">function myFunction2() {
+console.log("clicked")
+const options=document.getElementsByClassName("options");
+console.log(options.length);
+
+for(let i=0;i<options.length;i++)
+{
+  if(options[i].style.backgroundColor==="blue")
+  {
+    
+    options[i].style.backgroundColor="red";
+  }
+  else
+  {
+    options[i].style.backgroundColor="blue";
+  }
+}
+}
+</script> -->
+
+<!-- <button onclick="myFunction3()">Green</button>
+< type="text/javascript">function myFunction3() {
+document.body.style.backgroundColor = "green";
+}</> -->
+  <script src="../images/https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <div class="contann m-auto mt-5 mw-50">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top grey" style="background-color: rgb(3,3,61)">
+      <div class="container">
+        <img src="../images/../images/854-8544538_emblem-of-india-ashok-stambh-logo-hd.png" alt="" width="30" height="35">
+        <a class="navbar-brand title" href="#">Government of India
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active MenuItem  fs-5" aria-current="page" href="#">Home</a>
+            </li>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle MenuItem fs-5" href="#" id="navbarDropd fs-5own" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Schemes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../pages/schemes .html">State wise schemes</a></li>
+                <li><a class="dropdown-item" href="../pages/schemes .html">National Trust Schemes</a></li>
+                <li><a class="dropdown-item" href="../pages/schemes .html">Educational</a></li>
+                <li><a class="dropdown-item" href="../pages/schemes .html">Employment</a></li>
+                <li><a class="dropdown-item" href="../pages/schemes .html">DDRS</a></li>
+                <li><a class="dropdown-item" href="../pages/schemes .html">ADIP</a></li>
+                <li><a class="dropdown-item" href="../pages/schemes .html">NHFDC</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="about us.html" class="nav-link MenuItem fs-5">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link MenuItem fs-5" href="contact us.html">Contact Us</a>
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button onclick="scrollwindow()" class="btn grey btn-outline-success searchh" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="flexBox">
+      <div class="logo item">
+        <img src="../images/../images/logo.png" class="logoo" alt="" height="100">
+      </div>
+      <div class="department item container-fluid">
+        <a class="dep" target="_blank" href="http://disabilityaffairs.gov.in/content/"><b>दिव्यांगजन सशक्तिकरण विभाग<br>
+            Department of Empowerment of Persons with Disabilities (Divyangjan)</b></a>
+      </div>
+      <div class="department item container-fluid">
+        <a class="dep" target="b_lank" href="https://socialjustice.nic.in/"><b>सामाजिक न्याय एवं अधिकारिता मंत्रालय<br>
+            Ministry of Social Justice and Empowerment (MSJE)</b></a>
+      </div>
+      <div>
+        <h5 class="foot">Department of Empowerment of Persons with Disabilities</h4>
+      </div>
+    </div>
+    <div class="flexbox2">
+      <div class="item1">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../images/../images/10TH_NAT_DISABLED_DAY_0.jpeg" class="d-block w-100 img-fluid c-image" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/../images/DSC_0666.jpg" class="d-block w-100 c-image img-fluid" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="../images/../images/Inclusive Education.jpg" class="d-block w-100 c-image img-fluid" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="item2">
+        <div class="upper container-fluid">
+          <div class="options grey">
+            <a href="https://www.swavlambancard.gov.in/cms/card-benefits" target="blank" class="op">Disability UID</a>
+          </div>
+          <div class="options grey">
+            <a href="#" target="blank" class="op" id="legal">Legal Gurdianship</a>
+          </div>
+          <div class="options grey">
+            <a href="#" class="op">Find Nearby NGOs
+            </a>
+          </div>
+        </div>
+        <div class="lower container container-fluid">
+          <div class="options grey">
+            <a href="#" class="op" onclick="scrollwindow()">Guidelines
+            </a>
+          </div>
+          <div class="options grey">
+            <a href="#" class="op">NGO Registration
+            </a>
+          </div>
+          <div class="options grey">
+            <a href="#" class="op">Notices</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card_container">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <img src="../images/disha.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">DISHA</h5>
+                <p class="card-text">This is an early intervention and school readiness scheme for children upto 10
+                  years
+                  with the disabilities covered under the National Trust Act.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/vikas.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">VIKAAS</h5>
+                <p class="card-text">A day care scheme for persons with autism, cerebral palsy, mental retardation and
+                  multiple disabilities, above 10 years for enhancing interpersonal and vocational skills.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/gharaunda(1).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">GHARAUNDA</h5>
+                <p class="card-text">This scheme provides housing and care services throughout the life of the person
+                  with
+                  Autism, Cerebral Palsy, Mental Retardation and Multiple Disabilities.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/niramayana(1).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">NIRAMAYA</h5>
+                <p class="card-text">This scheme is to provide affordable Health Insurance to persons with Autism,
+                  Cerebral Palsy, Mental Retardation and Multiple Disabilities. </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/shayog.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">SAHYOGI</h5>
+                <p class="card-text">A scheme to set up Caregiver Cells (CGCs) for training and creating skilled
+                  workforce
+                  of caregivers to care for Person with Disabilities (PwD) and their families. .</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/gyan-prabha(1).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">GYAN PRABHA</h5>
+                <p class="card-text">A scheme to encourage people with Autism, Cerebral Palsy, Mental Retardation and
+                  Multiple Disabilities for pursuing educational/ vocational courses.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/prerna(1).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">PRERNA</h5>
+                <p class="card-text">A marketing scheme to create viable & wide spread channels for sale of products and
+                  services produced by persons with autism, cerebral palsy, mental retardation and multiple
+                  disabilities.
+                </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/shambav.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">SAMBHAV</h5>
+                <p class="card-text">This is a scheme to setup additional resource centres in each city, to collate and
+                  collect the Aids, software and other form of assistive devices.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/badhte-kadam3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">BADHTE KADAM</h5>
+                <p class="card-text">This scheme supports Registered Organisations (RO) of The National Trust to carry
+                  out
+                  activities for increasing the awareness of The National Trust disabilities.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/niramayana(1).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">NHFDC</h5>
+                <p class="card-text">National Handicapped Finance and Development Corporation NHFDC) has been set up to
+                  promote economic and development activities undertaken by Persons with Disabilities.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/niramayana(1).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">ADIP</h5>
+                <p class="card-text">Scheme of Assistance to Disabled Persons for Purchase/Fitting of Aids and
+                  Appliances (ADIP Scheme)</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/niramayana(1).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">DDRS</h5>
+                <p class="card-text">Deendayal Disabled Rehabilitation Scheme to promote
+                  Voluntary Action for Persons with Disabilities (Revised DDRS
+                  Scheme) </p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/disha.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">DISHA CUM VIKAAS</h5>
+                <p class="card-text">For the Registered Organisations, who were implementing multiple schemes, an option
+                  for implementing merged scheme was given. Based on the consent given by the ROs and the scheme
+                  guidelines, these ROs were allotted the merged Disha-cum-Vikaas Scheme (Day Care) w.e.f. 1.4.2018.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/samarth(1).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">SAMARTH</h5>
+                <p class="card-text">A scheme to provide respite home for orphans, families in crisis, Persons with
+                  Disabilities (PwD) from BPL, LIG families with at least one of the four disabilities covered under the
+                  National Trust Act.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card">
+              <img src="../images/samarth(1).jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">SAMARTH CUM GHARAUNDA</h5>
+                <p class="card-text">For the Registered Organisations, who were implementing multiple schemes, an option
+                  for implementing merged scheme was given. Based on the consent given by the ROs and the scheme
+                  guidelines, these ROs were allotted the merged Samarth-cum-Gharaunda Scheme (Residential) w.e.f.
+                  1.4.2018.</p>
+                <a href="#" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="wrapper footer-wrapper m-auto">
+    <div class="footer-top-wrapper">
+    </div>
+    <div class="footer-bottom-wrapper">
+      <div class="container footer-bottom-container">
+        <div class="footer-content clearfix">
+
+          <div class="copyright-content">
+            This website belongs to The National Trust, Ministry of Social Justice and Empowerment (MSJE), Govt. Of
+            India.
+            Site Designed, Developed by The National Trust and Hosted by National Informatics Centre.
+
+
+          </div>
+          <div class="footer-icon"><a
+              onclick="return confirm('This is external link, Are you sure you want to continue?');"
+              href="https://socialjustice.nic.in/" target="_blank" title="This link will open an external website"><img
+                src="../images/https://www.thenationaltrust.gov.in/assets/images/socialjustice.jpg" alt="Social Justice"
+                width="130"></a> <a href="https://india.gov.in/"
+              onclick="return confirm('This is external link, Are you sure you want to continue?');" target="_blank"
+              title="This link will open an external website"><img
+                src="../images/https://www.thenationaltrust.gov.in/assets/images/india-gov.png" alt="india.gov.in"></a>&nbsp; <a
+              href="https://accessibleindia.gov.in/"
+              onclick="return confirm('This is external link, Are you sure you want to continue?');" target="_blank"
+              title="Accessible India Campaign:This link will open an external website"><img
+                src="../images/https://www.thenationaltrust.gov.in/assets/images/accessible-india.png"
+                alt="Accessible India Campaign" width="130"></a><a href="https://www.swavalamban.info/"
+              onclick="return confirm('This is external link, Are you sure you want to continue?');" target="_blank"
+              title="This link will open an external website"><img
+                src="../images/https://www.thenationaltrust.gov.in/assets/images/swavlamban-595.png"
+                alt="https://www.swavalamban.info/" width="60"></a><a href="https://digitalindia.gov.in/"
+              onclick="return confirm('This is external link, Are you sure you want to continue?');" target="_blank"
+              title="This link will open an external website"><img
+                src="../images/https://www.thenationaltrust.gov.in/assets/images/digindia_35.png"
+                alt="https://www.thenationaltrust.gov.in/assets/images/digindia_35.png" width="93"></a>&nbsp; <a
+              href="https://www.narendramodi.in/mann-ki-baat/"
+              onclick="return confirm('This is external link, Are you sure you want to continue?');" target="_blank"
+              title="This link will open an external website"><img
+                src="../images/https://www.thenationaltrust.gov.in/assets/images/mankibaat.png"
+                alt="https://www.thenationaltrust.gov.in/assets/images/mankibaat.png" width="90"></a></div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    var x = window.matchMedia('(max-width: 500px)');
+    if (x.matches) {
+      scrollwindow();
+    }
+    else {
+      scrollwindoww();
+    }
+
+    function scrollwindow() {
+      window.scrollTo(0,800);
+    }
+    function scrollwindoww() {
+      window.scrollTo(0,300);
+    }
+  </script>
+</body>
+
+</html>
